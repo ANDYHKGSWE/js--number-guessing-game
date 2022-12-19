@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Guess The Number</title>
+</head>
+<body>
+        <div class="gameResult" id="gameResult">
+            <span class="resultEmoji wiggle" id="resultEmoji"></span>
+            <span class="resultWinningNumber" id="resultWinningNumber"></span>
+            <span class="resultText" id="resultText"></span>
+            <button class="restartBtn" id="restartButton">Restart</button>
+        </div>
+
+        <div class="wrapper show" id="wrapper">
+            <h1>Number Guessing<span class="titleSpan" id="guessFromTo"></span></h1>
+        
+
+            <div class="main-container" id="maincontainer">
+                <div class="top-container">
+                    <h3 class="hint center" id="hint"></h3>
+                    <input type="number" id="playerInput" placeholder="Enter a number.." onfocus="this.value=''"></input>
+                    <button id="guessButton">Guess</button>
+                    <button id="restartButton">Restart</button>
+                </div>
+                <div class="bottom-container">
+
+                    <div class="playerGuesses">
+                        <h2 class="playerscore center">Your Previous Guesses</h2>
+                        <ul class="center" id="playerGuesses">
+                            <!-- Här är antal gissningar-listan -->
+                        </ul>
+                    </div>
+
+                    <div class="aiGuesses">
+                        <h2 class="aiscore center">AI´s Previous Guesses</h2>
+                        <ul class="center" id="aiGuesses">
+                            <!-- Här är antal gissningar-listan -->
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+</body>
+<script src="js/index.js"></script>
+</html>
